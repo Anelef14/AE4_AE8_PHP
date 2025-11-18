@@ -31,6 +31,14 @@ $restaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : "";
         <input type="number" id="people" name="people" min="1" max="20" required>
         <br><br>
 
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="name">Your name:</label><br>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
         <input type="submit" value="Send reservation">
     </form>
 
@@ -39,11 +47,15 @@ $restaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : "";
         $restaurant = $_POST["restaurant"];
         $date = $_POST["date"];
         $people = $_POST["people"];
+        $email = $_POST["email"];
+        $name = $_POST["name"];
 
         echo "<h2>Reservation details:</h2>";
         echo "Restaurant: " . htmlspecialchars($restaurant) . "<br>";
         echo "Date: " . htmlspecialchars($date) . "<br>";
         echo "People: " . htmlspecialchars($people) . "<br>";
+        echo "Email: " . htmlspecialchars($email) . "<br>";
+        echo "Name: " . htmlspecialchars($name) . "<br>";
     }
     ?>
 </body>
