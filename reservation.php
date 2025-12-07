@@ -15,7 +15,7 @@ $restaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : "";
     <h1>Reservation Form</h1>
 
 
-    <form action="" method="post">
+<form action="confirm.php" method="post">
 
         <label for="restaurant">Restaurant:</label><br>
         <input type="text" id="restaurant" name="restaurant"
@@ -24,40 +24,23 @@ $restaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : "";
         <br><br>
 
         <label for="date">Reservation date:</label><br>
-        <input type="date" id="date" name="date" required>
+        <input type="date" id="date" name="date" >
         <br><br>
 
         <label for="people">Number of people:</label><br>
-        <input type="number" id="people" name="people" min="1" max="20" required>
+        <input type="number" id="people" name="people" min="1" max="20" >
         <br><br>
 
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" >
         <br><br>
 
         <label for="name">Your name:</label><br>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" >
         <br><br>
 
         <input type="submit" value="Send reservation">
     </form>
-
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $restaurant = $_POST["restaurant"];
-        $date = $_POST["date"];
-        $people = $_POST["people"];
-        $email = $_POST["email"];
-        $name = $_POST["name"];
-
-        echo "<h2>Reservation details:</h2>";
-        echo "Restaurant: " . htmlspecialchars($restaurant) . "<br>";
-        echo "Date: " . htmlspecialchars($date) . "<br>";
-        echo "People: " . htmlspecialchars($people) . "<br>";
-        echo "Email: " . htmlspecialchars($email) . "<br>";
-        echo "Name: " . htmlspecialchars($name) . "<br>";
-    }
-    ?>
 </body>
 
 </html>
