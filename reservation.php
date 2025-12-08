@@ -4,16 +4,13 @@ $restaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : "";
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserve</title>
 </head>
-
 <body>
     <h1>Reservation Form</h1>
-
 
 <form action="confirm.php" method="post">
 
